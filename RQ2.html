@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refactoring Empirical Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../../assets/w3.css">
+    <link rel="stylesheet" href="../../assets/w3-theme-teal.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/java.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117089382-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117089382-1');
+    </script>
+
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+  <style>
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+    }
+  </style>
+</head>
+<body id="pageBody">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+         <li><a href="RQ1.html">Refactoring Motivation</a></li>
+        <li><a href="RQ2.html">Refactoring Documentation</a></li>
+        <!--<li><a href="RQ3.html">RQ3</a></li>
+        <li><a href="RQ4.html">RQ4</a></li>
+        <li><a href="RQ5.html">RQ5</a></li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Refactoring Documentation</h1>      
+  </div>
+</div>
+
+ <div class="w3-center w3-padding-32">
+        <div class="w3-card w3-container w3-justify w3-padded-box">
+            <p>
+                Provided below are supplements to the research on refactoring documentation.
+            </p>
+            <ul>
+                <li>
+                    <a href="#RefactoringDocumentation">Refactoring Documentation</a>
+                </li>
+                <li>
+                    <a href="#RefactoringOperationDocumentation">Distribution of Refactoring Operations in Refactoring Documentation</a>
+                </li>
+            </ul>
+            <div class="w3-container" id="RefactoringDocumentation">
+                <h5>Refactoring Documentation</h5>
+				<p>What patterns do developers use to describe their refactoring activities?</p>
+                <p>
+                    To identify self-affirmed refactoring patterns, we perform manual analysis similar to our previous work [AlOmar
+et al. 2019a]. Since commit messages are written in natural language and we need to understand how developers
+express refactoring, we manually analyzed commit messages by reading through each message to identify self-affirmed
+refactorings.</p>
+					
+                    <span class=" w3-small w3-left-align"><a href="Documentation.html">Click to continue reading...</a></span>
+                </p>
+                <p>
+                    <span class=" w3-large w3-right"><a href="#pageBody"><i class="fa fa-arrow-circle-up"></i></a></span>
+                </p>
+            </div>
+            <div class="w3-container" id="RefactoringOperationDocumentation">
+                <h5>Distribution of Refactoring Operations in Refactoring Documentation</h5>
+				<p>Do Commits containing the label Refactor indicate more refactoring activity than those
+without the label?</p>
+                <p>
+                    [Murphy-Hill et al. 2008] proposed several hypotheses related to four methods that gather refactoring data and outlined
+experiments for testing those hypotheses. One of these methods concerns mining the commit log. [Murphy-Hill et al.
+2008] hypothesize that commits labeled with the keyword “refactor” do not indicate more refactoring instances than
+unlabeled commits. In an empirical context, we test this hypothesis in two steps. In the first steps, we used the keyword
+“refactor”, exactly as dictated by the authors.
+                    <br>
+                    <span class=" w3-small w3-left-align"><a href="MurphyhillHypo.html">Click to continue reading...</a></span>
+                </p>
+                <p>
+                    <span class=" w3-large w3-right"><a href="#pageBody"><i class="fa fa-arrow-circle-up"></i></a></span>
+                </p>
+            </div> 
+        </div>
+        <div class="w3-card w3-padded-box w3-margin-top">
+            <div class="w3-container w3-half w3-margin-top w3-margin-bottom">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+<footer class="container-fluid text-center">
+</footer>
+
+</body>
+</html>

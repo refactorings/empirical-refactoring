@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refactoring Empirical Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    div.a {
+  text-indent: 200px;
+}
+         .button {
+    background-color: #555555;; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+ 
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+	
+	text{
+	font-size:12px;
+}
+.mainBars rect{
+  shape-rendering: auto;
+  fill-opacity: 0;
+  stroke-width: 0.5px;
+  stroke: rgb(0, 0, 0);
+  stroke-opacity: 0;
+}
+.subBars{
+	shape-rendering:crispEdges;
+}
+.edges{
+	stroke:none;
+	fill-opacity:0.5;
+}
+.header{
+	text-anchor:middle;
+	font-size:12px;
+}
+line{
+	stroke:grey;
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="CaseStudy1.html">Case Study 1</a></li>
+        <li><a href="CaseStudy2.html">Case Study 2</a></li>
+        <li><a href="CaseStudy3.html">Case Study 3</a></li>
+        <li><a href="CaseStudy4.html">Case Study 4</a></li>
+        <li><a href="CaseStudy5.html">Case Study 5</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Refactoring Motivation: External Quality Attribute Improvement</h1>      
+  </div>
+</div>
+
+<div class="a"><h2>Commit Message</h2></div>
+
+<div class="container text-center">    
+  <br>
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading"> <a href="https://github.com/dustin/java-memcached-client/commit/e94fbf5db73390a94e93bbe4fd7ce892c393ee3a">Click here to view on GitHub</a>
+</div>
+        <div class="panel-body"><img src="./Images/GitEx_NonFunctional.PNG" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+</div>
+
+<div class="a"><h2>Refactorings (16 instances)</h2></div>
+
+<!-- div class="container text-center">--> 
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="js/viz.v1.js"></script>
+<script>
+
+var data=[['ExtractMethod','private checkPotentiallyTimedOutConnection() : void extracted from public handleIO() : void in class net.spy.memcached.MemcachedConnection',1],
+['ExtractMethod','private finishConnect(sk SelectionKey, node MemcachedNode) : void extracted from private handleIO(sk SelectionKey) : void in class net.spy.memcached.MemcachedConnection',1],
+['ExtractMethod','private handleReadsWhenChannelEndOfStream(currentOp Operation, node MemcachedNode, rbuf ByteBuffer) : Operation extracted from private handleReads(sk SelectionKey, qa MemcachedNode) : void in class net.spy.memcached.MemcachedConnection ',1],
+['ExtractMethod','private handleShutdownQueue() : void extracted from public handleIO() : void in class net.spy.memcached.MemcachedConnection ',1],
+['ExtractMethod','private potentiallyCloseLeakingChannel(ch SocketChannel, node MemcachedNode) : void extracted from private attemptReconnects() : void in class net.spy.memcached.MemcachedConnection',1],
+['ParameterizeVariable','qa : MemcachedNode to node : MemcachedNode in method private potentiallyCloseLeakingChannel(ch SocketChannel, node MemcachedNode) : void in class net.spy.memcached.MemcachedConnection',1],
+['RenameParameter','a : Collection<InetSocketAddress> to addrs : Collection<InetSocketAddress> in method protected createConnections(addrs Collection<InetSocketAddress>) : List<MemcachedNode> in class net.spy.memcached.MemcachedConnection',1],
+['RenameParameter','qa : MemcachedNode to node : MemcachedNode in method private handleReads(node MemcachedNode) : void in class net.spy.memcached.MemcachedConnection',1],
+['RenameParameter','qa : MemcachedNode to node : MemcachedNode in method private handleReadsWhenChannelEndOfStream(currentOp Operation, node MemcachedNode, rbuf ByteBuffer) : Operation in class net.spy.memcached.MemcachedConnection',1],
+['RenameParameter','qa : MemcachedNode to node : MemcachedNode in method private handleWrites(node MemcachedNode) : void in class net.spy.memcached.MemcachedConnection',1],
+['RenameParameter','qa : MemcachedNode to node : MemcachedNode in method private lostConnection(node MemcachedNode) : void in class net.spy.memcached.MemcachedConnection',1],
+['RenameParameter','qa : MemcachedNode to node : MemcachedNode in method protected queueReconnect(node MemcachedNode) : void in class net.spy.memcached.MemcachedConnection',1],
+['RenameVariable','qa : MemcachedNode to node : MemcachedNode in method private attemptReconnects() : void in class net.spy.memcached.MemcachedConnection',1],
+['RenameVariable','qa : MemcachedNode to node : MemcachedNode in method private handleInputQueue() : void in class net.spy.memcached.MemcachedConnection',1],
+['RenameVariable','qa : MemcachedNode to node : MemcachedNode in method public shutdown() : void in class net.spy.memcached.MemcachedConnection',1],
+['RenameVariable','reconTime : long to reconnectTime : long in method protected queueReconnect(node MemcachedNode) : void in class net.spy.memcached.MemcachedConnection',1]
+];
+var color ={ParameterizeVariable:"#3366CC", RenameParameter:"#DC3912",  ExtractMethod:"#FF9900", RenameVariable:"#109618"};
+var svg = d3.select("body").append("svg").attr("width", 1700).attr("height", 800);
+
+<!--svg.append("text").attr("x",250).attr("y",70).attr("class","header").text("Refactoring");-->
+	
+
+var g =[svg.append("g").attr("transform","translate(150,100)")
+	   ];
+
+var bp=[ viz.bP()
+		.data(data)
+		.min(12)
+		.pad(1)
+		.height(600)
+		.width(250)
+		.barSize(35)
+		.fill(d=>color[d.primary])		
+	,viz.bP()
+		.data(data)
+		.value(d=>d[3])
+		.min(12)
+		.pad(1)
+		.height(600)
+		.width(200)
+		.barSize(35)
+		.fill(d=>color[d.primary])
+];
+		
+[0,1].forEach(function(i){
+	g[i].call(bp[i])
+	
+	g[i].append("text").attr("x",-50).attr("y",-8).style("text-anchor","middle").text("Refactoring Operation");
+	g[i].append("text").attr("x", 280).attr("y",-8).style("text-anchor","middle").text("Instance");
+	
+	g[i].append("line").attr("x1",-100).attr("x2",0);
+	g[i].append("line").attr("x1",250).attr("x2",300);
+	
+	g[i].append("line").attr("y1",610).attr("y2",610).attr("x1",-100).attr("x2",0);
+	g[i].append("line").attr("y1",610).attr("y2",610).attr("x1",250).attr("x2",300);
+	
+	g[i].selectAll(".mainBars")
+		.on("mouseover",mouseover)
+		.on("mouseout",mouseout);
+
+	g[i].selectAll(".mainBars").append("text").attr("class","label")
+		.attr("x",d=>(d.part=="primary"? -30: 30))
+		.attr("y",d=>+6)
+		.text(d=>d.key)
+		.attr("text-anchor",d=>(d.part=="primary"? "end": "start"));
+	
+});
+
+function mouseover(d){
+	[0,1].forEach(function(i){
+		bp[i].mouseover(d);
+		
+		g[i].selectAll(".mainBars").select(".perc")
+		.text(function(d){ return d3.format("0.0%")(d.percent)});
+	});
+}
+function mouseout(d){
+	[0,1].forEach(function(i){
+		bp[i].mouseout(d);
+		
+		g[i].selectAll(".mainBars").select(".perc")
+		.text(function(d){ return d3.format("0.0%")(d.percent)});
+	});
+}
+d3.select(self.frameElement).style("height", "800px");
+</script>
+<hr>
+
+<footer class="container-fluid text-center">
+</footer>
+
+</body>
+</html>

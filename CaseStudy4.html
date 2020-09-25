@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refactoring Empirical Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    div.a {
+  text-indent: 200px;
+}
+         .button {
+    background-color: #555555;; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+ 
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+	
+		text{
+	font-size:12px;
+}
+.mainBars rect{
+  shape-rendering: auto;
+  fill-opacity: 0;
+  stroke-width: 0.5px;
+  stroke: rgb(0, 0, 0);
+  stroke-opacity: 0;
+}
+.subBars{
+	shape-rendering:crispEdges;
+}
+.edges{
+	stroke:none;
+	fill-opacity:0.5;
+}
+.header{
+	text-anchor:middle;
+	font-size:12px;
+}
+line{
+	stroke:grey;
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+         <li><a href="CaseStudy1.html">Case Study 1</a></li>
+        <li><a href="CaseStudy2.html">Case Study 2</a></li>
+        <li><a href="CaseStudy3.html">Case Study 3</a></li>
+        <li><a href="CaseStudy4.html">Case Study 4</a></li>
+        <li><a href="CaseStudy5.html">Case Study 5</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Refactoring Motivation: Feature Addition</h1>      
+  </div>
+</div>
+
+<div class="a"><h2>Commit Message</h2></div>
+
+<div class="container text-center">    
+  <br>
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><a href="https://github.com/tvrenamer/tvrenamer/commit/f594066a9b18e78c8667f8de7ed09cc45156c4e6">Click here to view on GitHub</a>
+</div>
+        <div class="panel-body"><img src="./Images/GitEx_Feature.PNG" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+</div>
+
+<div class="a"><h2>Refactorings (21 instances)</h2></div>
+
+<!-- div class="container text-center">--> 
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="js/viz.v1.js"></script>
+<script>
+
+var data=[['MoveAndRenameClass','com.google.code.tvrenamer.model.UserPreferencesListener moved and renamed to com.google.code.tvrenamer.controller.UserPreferencesChangeListener',1],
+['MoveClass','com.google.code.tvrenamer.model.UserPreferencesChangeEvent moved to com.google.code.tvrenamer.controller.UserPreferencesChangeEvent',1],
+['MoveClass','com.google.code.tvrenamer.model.util.UpdateChecker moved to com.google.code.tvrenamer.controller.UpdateChecker',1],
+['MoveClass','com.google.code.tvrenamer.view.UpdateCompleteHandler moved to com.google.code.tvrenamer.controller.UpdateCompleteHandler',1],
+['MoveMethod','private encodeSpecialCharacters(input String) : String from class com.google.code.tvrenamer.controller.TVRageProvider to public encodeSpecialCharacters(input String) : String from class com.google.code.tvrenamer.controller.util.StringUtils',1],
+['RenameAttribute','FILE_STATUS_COLUMN : int to STATUS_COLUMN : int in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameAttribute','btnBrowse : Button to addFilesButton : Button in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameAttribute','btnRenameSelected : Button to renameSelectedButton : Button in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameAttribute','colDest : TableColumn to destinationColumn : TableColumn in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameAttribute','progressBarTotal : ProgressBar to totalProgressBar : ProgressBar in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameAttribute','tblResults : Table to resultsTable : Table in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameMethod','private createButtonGroup() : void renamed to private createActionButtonGroup() : void in class com.google.code.tvrenamer.view.PreferencesDialog',1],
+['RenameMethod','private setupBrowseDialog() : void renamed to private setupAddFilesDialog() : void in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameVariable','bar : TaskBar to taskBar : TaskBar in method private getTaskItem() : TaskItem in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameVariable','btnQuit : Button to quitButton : Button in method private setupMainWindow() : void in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameVariable','colSelected : TableColumn to selectedColumn : TableColumn in method private setupResultsTable() : void in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameVariable','colStatus : TableColumn to sourceColum : TableColumn in method private setupResultsTable() : void in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameVariable','fileMenuHeader : MenuItem to fileMenuItem : MenuItem in method private setupMenuBar() : void in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameVariable','gridLayout : GridLayout to shellGridLayout : GridLayout in method private init() : void in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameVariable','menuBar : Menu to menuBarMenu : Menu in method private setupMenuBar() : void in class com.google.code.tvrenamer.view.UIStarter',1],
+['RenameVariable','xml : String to searchXml : String in method public getShowOptions(showName String) : ArrayList<Show> in class com.google.code.tvrenamer.controller.TVRageProvider',1]
+];
+var color ={MoveAndRenameClass:"#3366CC",MoveClass:"#DC3912",MoveMethod:"#FF9900",RenameAttribute:"#109618",RenameMethod:"#990099",RenameVariable:"#0099C6"};
+var svg = d3.select("body").append("svg").attr("width", 1700).attr("height", 800);
+
+
+<!--svg.append("text").attr("x",250).attr("y",70).attr("class","header").text("Refactoring");-->
+	
+
+var g =[svg.append("g").attr("transform","translate(150,100)")
+	   ];
+
+var bp=[ viz.bP()
+		.data(data)
+		.min(12)
+		.pad(1)
+		.height(600)
+		.width(250)
+		.barSize(35)
+		.fill(d=>color[d.primary])		
+	,viz.bP()
+		.data(data)
+		.value(d=>d[3])
+		.min(12)
+		.pad(1)
+		.height(600)
+		.width(200)
+		.barSize(35)
+		.fill(d=>color[d.primary])
+];
+		
+[0,1].forEach(function(i){
+	g[i].call(bp[i])
+	
+	g[i].append("text").attr("x",-50).attr("y",-8).style("text-anchor","middle").text("Refactoring Operation");
+	g[i].append("text").attr("x", 280).attr("y",-8).style("text-anchor","middle").text("Instance");
+	
+	g[i].append("line").attr("x1",-100).attr("x2",0);
+	g[i].append("line").attr("x1",250).attr("x2",300);
+	
+	g[i].append("line").attr("y1",610).attr("y2",610).attr("x1",-100).attr("x2",0);
+	g[i].append("line").attr("y1",610).attr("y2",610).attr("x1",250).attr("x2",300);
+	
+	g[i].selectAll(".mainBars")
+		.on("mouseover",mouseover)
+		.on("mouseout",mouseout);
+
+	g[i].selectAll(".mainBars").append("text").attr("class","label")
+		.attr("x",d=>(d.part=="primary"? -30: 30))
+		.attr("y",d=>+6)
+		.text(d=>d.key)
+		.attr("text-anchor",d=>(d.part=="primary"? "end": "start"));
+
+});
+
+function mouseover(d){
+	[0,1].forEach(function(i){
+		bp[i].mouseover(d);
+		
+		g[i].selectAll(".mainBars").select(".perc")
+		.text(function(d){ return d3.format("0.0%")(d.percent)});
+	});
+}
+function mouseout(d){
+	[0,1].forEach(function(i){
+		bp[i].mouseout(d);
+		
+		g[i].selectAll(".mainBars").select(".perc")
+		.text(function(d){ return d3.format("0.0%")(d.percent)});
+	});
+}
+d3.select(self.frameElement).style("height", "800px");
+</script>
+<hr>
+
+
+
+<footer class="container-fluid text-center">
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refactoring Empirical Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    div.a {
+  text-indent: 200px;
+}
+         .button {
+    background-color: #555555;; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+ 
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+	
+		text{
+	font-size:12px;
+}
+.mainBars rect{
+  shape-rendering: auto;
+  fill-opacity: 0;
+  stroke-width: 0.5px;
+  stroke: rgb(0, 0, 0);
+  stroke-opacity: 0;
+}
+.subBars{
+	shape-rendering:crispEdges;
+}
+.edges{
+	stroke:none;
+	fill-opacity:0.5;
+}
+.header{
+	text-anchor:middle;
+	font-size:12px;
+}
+line{
+	stroke:grey;
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="CaseStudy1.html">Case Study 1</a></li>
+        <li><a href="CaseStudy2.html">Case Study 2</a></li>
+        <li><a href="CaseStudy3.html">Case Study 3</a></li>
+        <li><a href="CaseStudy4.html">Case Study 4</a></li>
+        <li><a href="CaseStudy5.html">Case Study 5</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Refactoring Motivation: Internal Quality Attribute Improvement</h1>      
+  </div>
+</div>
+
+<div class="a"><h2>Commit Message</h2></div>
+
+<div class="container text-center">    
+  <br>
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading"> <a href="https://github.com/reficio/p2-maven-plugin/commit/950475ef3c2c55fa51075927d41757d52942e251">Click here to view on GitHub</a>
+  <!--<a href="https://github.com/ops4j/org.ops4j.pax.runner/commit/ffb106d0b79505acb6344dffc10660226b12d69a">Click here to view on GitHub</a>-->
+</div>
+        <div class="panel-body"><img src="./Images/GitEx_Design.PNG" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+</div>
+
+<div class="a"><h2>Refactorings (69 instances)</h2></div>
+<!-- div class="container text-center">--> 
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="js/viz.v1.js"></script>
+<script>
+
+var data=[['ChangePackage','org.ops4j.pax.runner.idea to org.ops4j.pixea',1],
+['ChangePackage','org.ops4j.pax.runner.idea to org.ops4j.pixea.bundles',1],
+['ChangePackage','org.ops4j.pax.runner.idea to org.ops4j.pixea.module',1],
+['ChangePackage','org.ops4j.pax.runner.idea to org.ops4j.pixea.runner',1],
+['ChangePackage','org.ops4j.pax.runner.idea.module to org.ops4j.pixea.bundles.editor',1],
+['ChangePackage','org.ops4j.pax.runner.idea.module to org.ops4j.pixea.module.packages',1],
+['MoveAndRenameClass','org.ops4j.pax.builder.bundles.BundleJar moved and renamed to biz.aqute.lib.osgi.About',1],
+['MoveAndRenameClass','org.ops4j.pax.runner.idea.module.DataBeanManifest moved and renamed to org.ops4j.pax.builder.bundles.ManifestModel',1],
+['MoveSourceFolder','cmdline/src/main/java/org/ops4j/pax to cmdline/src/main/java/org/ops4j/pixea',1],
+['MoveSourceFolder','common/src/main/java/org/ops4j/pax to common/src/main/java/org/ops4j/pixea',1],
+['MoveSourceFolder','common/src/test/java/org/ops4j/pax to common/src/test/java/org/ops4j/pixea',1],
+['MoveSourceFolder','common/src/main/java/org/ops4j/pixea to common/src/main/java/org/ops4j/pax',1],
+['MoveSourceFolder','common/src/main/java/org/ops4j/pixea/runner to common/src/main/java/org/ops4j/pax',1],
+['MoveClass','org.ops4j.pax.builder.ActivatorModel moved to org.ops4j.pax.bundlemaker.model.ActivatorModel',1],
+['MoveClass','org.ops4j.pax.builder.BuildException moved to org.ops4j.pax.bundlemaker.builder.BuildException',1],
+['MoveClass','org.ops4j.pax.builder.BundleBuilder moved to org.ops4j.pax.bundlemaker.builder.BundleBuilder',1],
+['MoveClass','org.ops4j.pax.builder.bundles.BundleModel moved to org.ops4j.pax.bundlemaker.model.BundleModel',1],
+['MoveClass','org.ops4j.pax.builder.bundles.ManifestModel moved to org.ops4j.pax.bundlemaker.model.ManifestModel',1],
+['MoveClass','org.ops4j.pax.builder.services.ServiceModel moved to org.ops4j.pax.bundlemaker.model.ServiceModel',1],
+['MoveClass','org.ops4j.pax.builder.services.ServiceProperties moved to org.ops4j.pax.bundlemaker.model.ServiceProperties',1],
+['MoveClass','org.ops4j.pax.runner.PomBuilder moved to org.ops4j.pax.pomparser.PomBuilder',1],
+['MoveClass','org.ops4j.pax.runner.PomException moved to org.ops4j.pax.pomparser.PomException',1],
+['MoveClass','org.ops4j.pax.runner.PomInfo moved to org.ops4j.pax.pomparser.PomInfo',1],
+['MoveClass','org.ops4j.pax.runner.PomManager moved to org.ops4j.pax.pomparser.PomManager',1],
+['MoveClass','org.ops4j.pax.runner.pom.Activation moved to org.ops4j.pax.pomparser.model.Activation',1],
+['MoveClass','org.ops4j.pax.runner.pom.ActivationFile moved to org.ops4j.pax.pomparser.model.ActivationFile',1],
+['MoveClass','org.ops4j.pax.runner.pom.ActivationOS moved to org.ops4j.pax.pomparser.model.ActivationOS',1],
+['MoveClass','org.ops4j.pax.runner.pom.ActivationProperty moved to org.ops4j.pax.pomparser.model.ActivationProperty',1],
+['MoveClass','org.ops4j.pax.runner.pom.Build moved to org.ops4j.pax.pomparser.model.Build',1],
+['MoveClass','org.ops4j.pax.runner.pom.BuildBase moved to org.ops4j.pax.pomparser.model.BuildBase',1],
+['MoveClass','org.ops4j.pax.runner.pom.CiManagement moved to org.ops4j.pax.pomparser.model.CiManagement',1],
+['MoveClass','org.ops4j.pax.runner.pom.Contributor moved to org.ops4j.pax.pomparser.model.Contributor',1],
+['MoveClass','org.ops4j.pax.runner.pom.Dependency moved to org.ops4j.pax.pomparser.model.Dependency',1],
+['MoveClass','org.ops4j.pax.runner.pom.DependencyManagement moved to org.ops4j.pax.pomparser.model.DependencyManagement',1],
+['MoveClass','org.ops4j.pax.runner.pom.DeploymentRepository moved to org.ops4j.pax.pomparser.model.DeploymentRepository',1],
+['MoveClass','org.ops4j.pax.runner.pom.Developer moved to org.ops4j.pax.pomparser.model.Developer',1],
+['MoveClass','org.ops4j.pax.runner.pom.DistributionManagement moved to org.ops4j.pax.pomparser.model.DistributionManagement',1],
+['MoveClass','org.ops4j.pax.runner.pom.Exclusion moved to org.ops4j.pax.pomparser.model.Exclusion',1],
+['MoveClass','org.ops4j.pax.runner.pom.Extension moved to org.ops4j.pax.pomparser.model.Extension',1],
+['MoveClass','org.ops4j.pax.runner.pom.IssueManagement moved to org.ops4j.pax.pomparser.model.IssueManagement',1],
+['MoveClass','org.ops4j.pax.runner.pom.License moved to org.ops4j.pax.pomparser.model.License',1],
+['MoveClass','org.ops4j.pax.runner.pom.MailingList moved to org.ops4j.pax.pomparser.model.MailingList',1],
+['MoveClass','org.ops4j.pax.runner.pom.Model moved to org.ops4j.pax.pomparser.model.Model',1],
+['MoveClass','org.ops4j.pax.runner.pom.Notifier moved to org.ops4j.pax.pomparser.model.Notifier',1],
+['MoveClass','org.ops4j.pax.runner.pom.ObjectFactory moved to org.ops4j.pax.pomparser.model.ObjectFactory',1],
+['MoveClass','org.ops4j.pax.runner.pom.Organization moved to org.ops4j.pax.pomparser.model.Organization',1],
+['MoveClass','org.ops4j.pax.runner.pom.Parent moved to org.ops4j.pax.pomparser.model.Parent',1],
+['MoveClass','org.ops4j.pax.runner.pom.Plugin moved to org.ops4j.pax.pomparser.model.Plugin',1],
+['MoveClass','org.ops4j.pax.runner.pom.PluginExecution moved to org.ops4j.pax.pomparser.model.PluginExecution',1],
+['MoveClass','org.ops4j.pax.runner.pom.PluginManagement moved to org.ops4j.pax.pomparser.model.PluginManagement',1],
+['MoveClass','org.ops4j.pax.runner.pom.Prerequisites moved to org.ops4j.pax.pomparser.model.Prerequisites',1],
+['MoveClass','org.ops4j.pax.runner.pom.Profile moved to org.ops4j.pax.pomparser.model.Profile',1],
+['MoveClass','org.ops4j.pax.runner.pom.Relocation moved to org.ops4j.pax.pomparser.model.Relocation',1],
+['MoveClass','org.ops4j.pax.runner.pom.ReportPlugin moved to org.ops4j.pax.pomparser.model.ReportPlugin',1],
+['MoveClass','org.ops4j.pax.runner.pom.ReportSet moved to org.ops4j.pax.pomparser.model.ReportSet',1],
+['MoveClass','org.ops4j.pax.runner.pom.Reporting moved to org.ops4j.pax.pomparser.model.Reporting',1],
+['MoveClass','org.ops4j.pax.runner.pom.Repository moved to org.ops4j.pax.pomparser.model.Repository',1],
+['MoveClass','org.ops4j.pax.runner.pom.RepositoryPolicy moved to org.ops4j.pax.pomparser.model.RepositoryPolicy',1],
+['MoveClass','org.ops4j.pax.runner.pom.Resource moved to org.ops4j.pax.pomparser.model.Resource',1],
+['MoveClass','org.ops4j.pax.runner.pom.Scm moved to org.ops4j.pax.pomparser.model.Scm',1],
+['MoveClass','org.ops4j.pax.runner.pom.Site moved to org.ops4j.pax.pomparser.model.Site',1],
+['MoveClass','org.ops4j.pax.runner.repositories.BundleInfo moved to org.ops4j.pax.repoman.BundleInfo',1],
+['MoveClass','org.ops4j.pax.runner.repositories.BundleObserver moved to org.ops4j.pax.repoman.BundleObserver',1],
+['MoveClass','org.ops4j.pax.runner.repositories.BundleRef moved to org.ops4j.pax.repoman.BundleRef',1],
+['MoveClass','org.ops4j.pax.runner.repositories.ObrRepository moved to org.ops4j.pax.repoman.ObrRepository',1],
+['MoveClass','org.ops4j.pax.runner.repositories.Repository moved to org.ops4j.pax.repoman.Repository',1],
+['MoveClass','org.ops4j.pax.runner.repositories.RepositoryInfo moved to org.ops4j.pax.repoman.RepositoryInfo',1],
+['MoveClass','org.ops4j.pax.runner.repositories.RepositoryManagerImpl moved to org.ops4j.pax.repoman.RepositoryManagerImpl',1],
+['MoveClass','org.ops4j.pax.runner.repositories.RepositoryObserver moved to org.ops4j.pax.repoman.RepositoryObserver',1]
+
+];
+var color ={ChangePackage:"#3366CC",MoveClass:"#DC3912",MoveAndRenameClass:"#FF9900",MoveSourceFolder:"#109618"};
+var svg = d3.select("body").append("svg").attr("width", 1700).attr("height",2000);
+
+<!--svg.append("text").attr("x",250).attr("y",70).attr("class","header").text("Refactoring");-->
+	
+
+var g =[svg.append("g").attr("transform","translate(150,100)")
+	   ];
+
+var bp=[ viz.bP()
+		.data(data)
+		.min(12)
+		.pad(1)
+		.height(1700)
+		.width(250)
+		.barSize(35)
+		.fill(d=>color[d.primary])		
+	,viz.bP()
+		.data(data)
+		.value(d=>d[3])
+		.min(12)
+		.pad(1)
+		.height(600)
+		.width(200)
+		.barSize(35)
+		.fill(d=>color[d.primary])
+];
+		
+[0,1].forEach(function(i){
+	g[i].call(bp[i])
+	
+	g[i].append("text").attr("x",-50).attr("y",-8).style("text-anchor","middle").text("Refactoring Operation");
+	g[i].append("text").attr("x", 280).attr("y",-8).style("text-anchor","middle").text("Instance");
+	
+	g[i].append("line").attr("x1",-100).attr("x2",0);
+	g[i].append("line").attr("x1",250).attr("x2",300);
+	
+	g[i].append("line").attr("y1",1700).attr("y2",1700).attr("x1",-100).attr("x2",0);
+	g[i].append("line").attr("y1",1700).attr("y2",1700).attr("x1",250).attr("x2",300);
+	
+	g[i].selectAll(".mainBars")
+		.on("mouseover",mouseover)
+		.on("mouseout",mouseout);
+
+	g[i].selectAll(".mainBars").append("text").attr("class","label")
+		.attr("x",d=>(d.part=="primary"? -30: 30))
+		.attr("y",d=>+6)
+		.text(d=>d.key)
+		.attr("text-anchor",d=>(d.part=="primary"? "end": "start"));
+
+});
+
+function mouseover(d){
+	[0,1].forEach(function(i){
+		bp[i].mouseover(d);
+		
+		g[i].selectAll(".mainBars").select(".perc")
+		.text(function(d){ return d3.format("0.0%")(d.percent)});
+	});
+}
+function mouseout(d){
+	[0,1].forEach(function(i){
+		bp[i].mouseout(d);
+		
+		g[i].selectAll(".mainBars").select(".perc")
+		.text(function(d){ return d3.format("0.0%")(d.percent)});
+	});
+}
+d3.select(self.frameElement).style("height", "800px");
+</script>
+<hr>
+
+
+
+
+<footer class="container-fluid text-center">
+</footer>
+
+</body>
+</html>

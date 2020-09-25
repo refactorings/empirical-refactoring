@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refactoring Empirical Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="https://refactorings.github.io/empirical-refactoring/">Home</a></li>
+        <li><a href="Projects.html">Dataset</a></li>
+         <li><a href="RQ1.html">Experiments</a></li>
+		 <li><a href="CaseStudy1.html">Case Studies</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Refactoring Dataset</h1>      
+  </div>
+</div>
+
+<div class="container body-content">
+
+  <div class="row">
+        <div class="col-md-4">
+            <h2>Projects</h2>
+            <p>
+           List of open source projects used in this study.
+            </p>
+            <p>
+                <a class="btn btn-default" href="Projects.html">Download &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Refactoring Detection</h2>
+            <p>
+               List of refactoring commits with several properties related to the selected projects.
+            </p>
+            <p>
+                <a class="btn btn-default" href="https://drive.google.com/open?id=15DN9uOY-3mbXtQF2d0US_zU7nFhITPrB">Download &raquo;</a>
+            </p>
+        </div>
+		 <div class="col-md-4">
+            <h2>JUnit File Detection</h2>
+            <p>
+              List of the refactoring applied to unit test files.
+            </p>
+            <p>
+                <a class="btn btn-default" href="JUnitFile.html">Download &raquo;</a>
+            </p>
+        </div>
+
+    </div>
+        <div class="row">
+		     <div class="col-md-4">
+            <h2>Commit Classification (Manual)</h2>
+            <p>
+                List of commit messages that are manually classifed.
+            </p>
+            <p>
+                <a class="btn btn-default" href="ManualClassification.html">Download &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Commit Classification (Automatic)</h2>
+            <p>
+               A complte package of the automated classification for different machine learning algorithms used in this study. 
+            </p>
+            <p>
+                <a class="btn btn-default" href="https://drive.google.com/drive/u/1/folders/1NuNyzkLKO3GgYp-WYfEI6dTqMfHOURXV">Download &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Refactoring Documentation</h2>
+            <p>
+               List of potential Self-Affirmed Refactoring (SAR) commits.
+            </p>
+            <p>
+                <a class="btn btn-default" href="https://drive.google.com/open?id=15DN9uOY-3mbXtQF2d0US_zU7nFhITPrB">Download &raquo;</a>
+            </p>
+        </div>
+</div>
+ <div class="row">
+		     <div class="col-md-4">
+            <h2>All Datasets</h2>
+            <p>
+                A complete package of all datasets used in this study.
+            </p>
+            <p>
+                <a class="btn btn-default" href="">Download &raquo;</a>
+            </p>
+        </div>
+</div>
+</div>
+</body>
+
+<footer class="container-fluid text-center">
+</footer>
+</html>

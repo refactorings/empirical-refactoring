@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refactoring Empirical Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link type="text/css" rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+    <link href="stylesheets/bootstrap-responsive.min.css" rel="stylesheet">
+    <!--<link href='http://fonts.googleapis.com/css?family=Rosario:400,700' rel='stylesheet' type='text/css'>-->
+    <link type="text/css" rel="stylesheet" href="stylesheets/style.css"/>
+  <style>
+    #mydiv {
+    position:fixed;
+	<!--height: 100%;
+  width: 200px;-->
+}
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 1900px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 760px) {
+      .sidenav {
+        height: auto;
+        padding: 10px;
+      }
+      .row.content {height:auto;} 
+    }
+	img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="https://refactorings.github.io/empirical-refactoring/">Home</a></li>
+        <li><a href="Dataset.html">Dataset</a></li>
+         <li><a href="RQ1.html">Experiments</a></li>
+		 <li><a href="CaseStudy1.html">Case Studies</a></li>
+		 <li><a href="About.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    
+    <div class="col-sm-2 sidenav">
+	<!--
+     <h3>Study Datasets</h3>
+     <div class="well">
+        <p></p>
+      <p><a href="#">Automated Analysis</a></p>
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+    </div>
+  <div class="well">
+        <p></p>
+      <p><a href="./Manual.zip">Manual Analysis</a></p>
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+    </div>-->
+    </div>
+
+    
+    <div class="col-sm-8 text-left"> 
+      <h2>How We Refactor and How We Document it? On the Use of Supervised Machine Learning Algorithms to Classify Refactoring Documentation</h2>
+      <hr>
+      <p><!--In this empirical study, we examined refactoring activities to better understand the developer&#39;s
+perception of refactoring by mining and automatically classifying refactoring activities in 1,706 open
+source Java projects. We go
+beyond analyzing whether refactoring have been intended to fix code smells, by adding dimensions related to verifying whether production files are refactored similarly to test files, identifying whether
+the application of refactoring is randomly distributed among developers, analyzing the frequency of
+refactorings during the release and testing periods, and detecting the type of activities that refactorings
+are interleaved with.-->
+Refactoring, as coined by William Obdyke in 1992, is the art of optimizing the syntactic design of a software system without altering
+its external behavior. Refactoring was also cataloged by Martin Fowler as a response to the existence of defects that negatively impact
+software design. Since then, a significant amount of research in refactoring has presumed that refactoring is primarily motivated by
+the need to improve system structures. However, recent studies have shown that developers may incorporate refactoring strategies
+in other development-related activities that go beyond improving the design. Unfortunately, these studies are limited to developer
+interviews and a reduced set of projects.</p>
+
+<p>To cope with the above-mentioned limitations, we aim to better understand what motivates developers to apply a refactoring by
+mining and automatically classifying 111,884 commits containing refactoring activities, extracted from 800 open source Java projects.
+We trained a multi-class classifier to categorize these commits into 3 novel categories, namely, Internal Quality Attributes, External
+Quality Attributes, and Code Smells, along with the traditional Bug Fix and Functional categories. Such classification enables to
+quantification of how much each of these categories trigger refactoring activities in general, and challenges the original definition of
+refactoring, being exclusive to improving software design and fixing code smells. Furthermore, to better understand our classification
+results, we qualitatively analyzed commit messages to extract textual patterns that developers regularly use to describe their refactoring
+activities.</p>
+
+<p>The results of our empirical investigation show that (1) fixing code smells is not the main driver for developers to refactoring their
+code bases. As explicitly mentioned by the developers in their commits messages, refactoring is solicited for a wide variety of reasons,
+going beyond its traditional definition, such as reducing the software’s proneness to bugs, easing the addition of functionality, resolving
+lexical ambiguity, enforcing code styling, and improving the design’s testability and reusability; (2) the distribution of refactoring
+operations differ between production and test files. Operations undertaking production is significantly larger than operations applied
+to test files; (3) developers use a variety of patterns to purposefully target refactoring-related activities; (4) developers occasionally
+explicitly mention the motivation behind their refactoring strategies; (5) the textual patterns, which we extracted in this paper, provide
+a better coverage for how developers document their refactorings.</p><br>
+      <p>More specifically, the research questions that we investigated are:</p>
+      <!--<p><strong>RQ1. Do software developers perform different types of refactoring operations on test code versus
+production code?</strong></p>
+      <p>The rationale behind this research question is to investigate whether the refactoring strategies differ by the nature of the target file. We answer it by seeking any patterns that developers specifically apply to either production or test codes.</p>
+      <p><strong>RQ2. Is there a subset of developers, within the development team, who are responsible for refactoring
+the code?</strong></p>
+      <p>This research question challenges the scalability of several papers that have performed developer interviews and demonstrated that only a subset of developers perform major refactoring activities. In our study, we verify whether the task of refactoring is equally distributed among all developers or if it is the responsibility of a subset of developers. We also consider whether it is proportional to each developer's overall contribution to the project in terms of commits.</p>
+      <p><strong>RQ3. Are there more refactoring activities before project releases than after?</strong></p>
+      <p>Refactoring is known to be solicited around  major releases, yet there is not enough information on the nature of activities applied. To answer this research question, we monitor the refactoring activities for a time window centered by the release date, then we compare the frequency of refactoring before and after the release of the new version.</p>
+      <p><strong>RQ4. Is refactoring activity on production code preceded by the addition or modification of test
+code?</strong></p>
+      <p>Similarly to the previous research question, we compare the frequency of refactoring before and after the creation or updates of a large set of test code.</p>
+      <p><strong>RQ5. What is the developer&#39;s purpose of the applied refactorings?</strong></p>
+      <p>We determine the motivation of the developer through the classification of the commit containing these refactoring operations. It identifies the type of development tasks that refactorings were interleaved with, e.g., updating a feature, or debugging.</p><br>-->
+	  <p><strong>RQ1. What is the purpose of the applied refactorings?</strong></p>
+	  <p>While previous surveys analyze how developers apply refactorings in varying development contexts,
+none of them have measured the ubiquity of these varying contexts in practice. Therefore, we quantify the
+distribution of refactorings performed in varying development contexts to augment our understanding of
+refactorings in theory vs. practice.</p>
+      <p><strong>RQ2. What patterns do developers use to describe their refactoring activities?</strong></p>
+	  <p>Since there is no consensus on how to formally document the act of refactoring code, we intend to
+extract (from commit messages) words and phrases commonly used to document refactoring. Such information is useful from many perspectives: it allows the understanding of the rationale behind the applied refactorings,
+e.g., fixing code smells or improving specific quality attributes. Also, it reveals what refactoring operations tend
+to be typically documented, and whether developers explicitly mention them as part of their documentation.
+Little is known about how developers document refactoring as previous studies mainly rely on the keyword
+refactor to annotate such documentation.</p>
+      <p>If you are interested to learn more about the process we followed, please refer to our paper.</p>
+	  <hr>
+	  <!---
+	  <h3>Dataset Overview</h3>
+	  
+	  <div class="content">
+      <div class="container">
+		<div class="col-md-6"  >
+                <style type="text/css">
+                    circle.node {
+                        cursor: pointer;
+                        stroke: #000;
+                        stroke-width: .5px;
+                    }
+
+                    circle.node.directory {
+                        stroke: #9ecae1;
+                        stroke-width: 2px;
+                    }
+
+                    circle.node.collapsed {
+                        stroke: #555;
+                    }
+
+                    .nodetext {
+                        fill: #252929;
+                        font-weight: bold;
+                        text-shadow: 0 0 0.2em white;
+                    }
+
+                    line.link {
+                        fill: none;
+                        stroke: #9ecae1;
+                        stroke-width: 1.5px;
+                    }
+                </style>
+				
+		 <div id="visualization"></div>
+                <!--<h4 style="text-align: center">Visualization of our dataset</h4>-->
+
+				<!--
+               <script type="text/javascript" src="js/d3/d3.js"></script>
+    <script type="text/javascript" src="js/d3/d3.geom.js"></script>
+    <script type="text/javascript" src="js/d3/d3.layout.js"></script>
+    <script type="text/javascript" src="js/CodeFlower.js"></script>
+    <script type="text/javascript" src="js/dataConverter.js"></script>
+
+               
+                <script type="text/javascript">
+				
+                    var currentCodeFlower;
+                    var createCodeFlower = function(json) {
+                        console.log(json);
+                        if (currentCodeFlower) currentCodeFlower.cleanup();
+                        // adapt layout size to the total number of elements
+                        var total = countElements(json);
+                        w = parseInt(Math.sqrt(total) * 30, 10);
+                        h = parseInt(Math.sqrt(total) * 30, 10);
+                        console.log(w,h);
+                        // create a new CodeFlower
+                        currentCodeFlower = new CodeFlower("#visualization", 600, 600).update(json);
+                    };
+
+                    //Load dataset
+                    d3.json('data.json', createCodeFlower);
+
+
+                </script>
+				 </div>      
+    </div>
+	</div>
+
+      <hr>-->
+	  <h3>Approach Overview</h3>
+
+<!--<div class="container text-center">    
+  <br>
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+</div>-->
+        <div class="panel-body"><img src="./Images/DetailedApproach.PNG" style="width:70%" alt="Image" class="center"></div>
+       <!-- <div class="panel-footer"></div>
+      </div>
+  </div>
+  </div>
+</div>
+</div>-->
+<hr>
+	  <!--<h3>Navigable Dataset</h3>
+	  <ul>
+	  <li><a href="Projects.html">Studied Projects</a></li>
+	  <li>All Commits with Refactoring</li>
+	  <li><a href="ManualClassification.html">Manually Classified Commits</a></li>
+	  <li>Automatically Classified Commits</li>
+	  </ul>
+	  <hr>-->
+      <h3>Related Paper</h3>
+      <p>Eman Abdullah AlOmar, Anthony Peruma, Mohamed Wiem Mkaouer, Christian
+Newman, Ali Ouni and Marouane Kessentini, "How We Refactor and How We Affirm it? On the Use of Supervised Machine Learning Algorithms to Classify Refactoring Documentation". <a href="./ESWA_Manuscript.pdf">[preprint]</a></p> 
+    </div>
+    <div class="col-sm-2 sidenav">
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p></p>
+</footer>
+
+</body>
+</html>

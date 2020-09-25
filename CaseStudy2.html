@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refactoring Empirical Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+  div.a {
+  text-indent: 200px;
+}
+         .button {
+    background-color: #555555;; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+ 
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+    <li><a href="CaseStudy1.html">Case Study 1</a></li>
+        <li><a href="CaseStudy2.html">Case Study 2</a></li>
+        <li><a href="CaseStudy3.html">Case Study 3</a></li>
+        <li><a href="CaseStudy4.html">Case Study 4</a></li>
+        <li><a href="CaseStudy5.html">Case Study 5</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Refactoring Motivation: Code Smell Resolution</h1>      
+  </div>
+</div>
+
+<div class="a"><h2>Commit Message</h2></div>
+
+<div class="container text-center">    
+  <br>
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><a href="https://github.com/reficio/p2-maven-plugin/commit/950475ef3c2c55fa51075927d41757d52942e251">Click here to view on GitHub</a>
+</div>
+        <div class="panel-body"><img src="./Images/GitEx_CodeSmell.PNG" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+</div>
+
+
+<div class="a"><h2>Refactorings (38 instances)</h2></div>
+
+<!-- div class="container text-center">--> 
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="js/viz.v1.js"></script>
+<script>
+
+var data=[['ChangePackage','org.reficio.p2.repo to org.reficio.p2.resolver',1],
+['ExtractClass','org.reficio.p2.P2Helper from class org.reficio.p2.bundler.ArtifactBundlerInstructions',1],
+['ExtractClass','org.reficio.p2.bundler.ArtifactBundlerInstructions.Builder from class org.reficio.p2.resolver.Artifact',1],
+['ExtractClass','org.reficio.p2.bundler.impl.AquteHelper from class org.reficio.p2.bundler.impl.AquteBundler',1],
+['ExtractClass','org.reficio.p2.publisher.CategoryPublisher.Builder from class org.reficio.p2.publisher.CategoryPublisher',1],
+['ExtractMethod','private processArtifacts() : void extracted from public execute() : void in class org.reficio.p2.P2Mojo',1],
+['ExtractVariable','bundleNameFromManifest : String in method public getBundleName_correctBundleNameFromMainAttribuets() : void from class org.reficio.p2.utils.BundleUtilsTest',1],
+['MoveAndRenameClass','org.reficio.p2.utils.BundleWrapper moved and renamed to org.reficio.p2.bundler.impl.AquteBundler',1],
+['MoveAndRenameClass','org.reficio.p2.utils.WrapRequestProperties moved and renamed to org.reficio.p2.bundler.ArtifactBundlerInstructions',1],
+['MoveAttribute','private TYCHO_VERSION : String from class org.reficio.p2.P2Mojo to class org.reficio.p2.publisher.BundlePublisher',1],
+['MoveAttribute','private additionalArgs : String[] from class org.reficio.p2.utils.CategoryPublisher to class org.reficio.p2.publisher.CategoryPublisher.Builder',1],
+['MoveAttribute','private forkedProcessTimeoutInSeconds : int from class org.reficio.p2.utils.CategoryPublisher to class org.reficio.p2.publisher.CategoryPublisher.Builder',1],
+['MoveAttribute','private launcher : P2ApplicationLauncher from class org.reficio.p2.utils.CategoryPublisher to class org.reficio.p2.publisher.CategoryPublisher.Builder',1],
+['MoveAttribute','private resolvedArtifacts : List<ResolvedArtifact> from class org.reficio.p2.P2Artifact to class org.reficio.p2.resolver.ArtifactResolutionResult',1],
+['MoveAttribute','private version : String from class org.reficio.p2.repo.Artifact to class org.reficio.p2.bundler.ArtifactBundlerInstructions.Builder',1],
+['MoveAttribute','public TOOL : String from class org.reficio.p2.utils.BundleWrapper to class org.reficio.p2.bundler.impl.AquteHelper',1],
+['MoveAttribute','public TOOL_KEY : String from class org.reficio.p2.utils.BundleWrapper to class org.reficio.p2.bundler.impl.AquteHelper',1],
+['MoveClass','org.reficio.p2.log.Logger moved to org.reficio.p2.logger.Logger',1],
+['MoveClass','org.reficio.p2.utils.CategoryPublisher moved to org.reficio.p2.publisher.CategoryPublisher',1],
+['MoveMethod','private calculateName(symbolicName String) : String from class org.reficio.p2.utils.WrapRequestProperties to private calculateName(symbolicName String) : String from class org.reficio.p2.P2Helper',1],
+['MoveMethod','private setManifest(analyzer Analyzer) : void from class org.reficio.p2.utils.BundleWrapper to private setManifest(analyzer Analyzer) : void from class org.reficio.p2.bundler.impl.AquteHelper',1],
+['MoveMethod','private setPackageOptions(analyzer Analyzer) : void from class org.reficio.p2.utils.BundleWrapper to private setPackageOptions(analyzer Analyzer) : void from class org.reficio.p2.bundler.impl.AquteHelper',1],
+['MoveMethod','public calculateSourceName(name String, symbolicName String) : String from class org.reficio.p2.utils.WrapRequestProperties to public calculateSourceName(name String, symbolicName String) : String from class org.reficio.p2.P2Helper',1],
+['MoveMethod','public calculateSourceSymbolicName(symbolicName String) : String from class org.reficio.p2.utils.WrapRequestProperties to public calculateSourceSymbolicName(symbolicName String) : String from class org.reficio.p2.P2Helper',1],
+['RenameMethod','private wrap(request WrapRequest) : void renamed to public execute(request ArtifactBundlerRequest, instructions ArtifactBundlerInstructions) : void in class org.reficio.p2.bundler.impl.AquteBundler',1],
+['RenameMethod','public adjustOutputVersion(artifact ResolvedArtifact, inputFile File, outputFile File) : void renamed to public adjustSnapshotOutputVersion(inputFile File, outputFile File, version String) : void in class org.reficio.p2.utils.JarUtils',1],
+['RenameMethod','public execute() : void renamed to public exceptionThrownInCaseOfLauncherFailure() : void in class org.reficio.p2.utils.CategoryPublisherTest',1],
+['RenameMethod','public factory() : Factory renamed to public builder() : Builder in class org.reficio.p2.publisher.CategoryPublisher',1],
+['RenameMethod','public factoryAdditionalArgs() : void renamed to public wrongArgs() : void in class org.reficio.p2.utils.CategoryPublisherTest',1],
+['RenameMethod','public factoryLauncher() : void renamed to public nullLauncher() : void in class org.reficio.p2.utils.CategoryPublisherTest',1],
+['RenameMethod','public factoryTimeout() : void renamed to public wrongTimeout() : void in class org.reficio.p2.utils.CategoryPublisherTest',1],
+['RenameMethod','public getSourceVersion() : String renamed to public getProposedVersion() : String in class org.reficio.p2.bundler.ArtifactBundlerInstructions',1],
+['RenameMethod','public testBundleName() : void renamed to public getBundleName_correctBundleNameFromMainAttribuets() : void in class org.reficio.p2.utils.BundleUtilsTest',1],
+['RenameMethod','public testCalculateSourceName() : void renamed to public calculateSourceName_specTest() : void in class org.reficio.p2.utils.WrapRequestPropertiesTest',1],
+['RenameMethod','public testIsBundleNoFile() : void renamed to public isBundle_nonExistingFile() : void in class org.reficio.p2.utils.BundleUtilsTest',1],
+['RenameMethod','public testManifestAttributes() : void renamed to public newManifest_hasMainAttributes() : void in class org.reficio.p2.utils.BundleUtilsTest',1],
+['RenameMethod','public uninitializedLogger() : void renamed to public getLog_uninitializedLogger_exceptionThrown() : void in class org.reficio.p2.utils.LoggerTest',1],
+['RenameVariable','refrencedBundleSymbolicName : String to referencedBundleSymbolicName : String in method private doSourceWrap(request ArtifactBundlerRequest, instructions ArtifactBundlerInstructions) : void in class org.reficio.p2.bundler.impl.AquteBundler',1]
+];
+var color ={ChangePackage:"#3366CC",ExtractClass:"#DC3912",ExtractMethod:"#FF9900",ExtractVariable:"#109618",MoveAndRenameClass:"#990099",MoveAttribute:"#0099C6",MoveClass:"#3366CC",MoveMethod:"#DC3912",RenameMethod:"#FF9900",RenameVariable:"#109618"};
+var svg = d3.select("body").append("svg").attr("width", 1700).attr("height",800);
+
+
+<!--svg.append("text").attr("x",250).attr("y",70).attr("class","header").text("Refactoring");-->
+	
+
+var g =[svg.append("g").attr("transform","translate(150,100)")
+	   ];
+
+var bp=[ viz.bP()
+		.data(data)
+		.min(12)
+		.pad(1)
+		.height(600)
+		.width(250)
+		.barSize(35)
+		.fill(d=>color[d.primary])		
+	,viz.bP()
+		.data(data)
+		.value(d=>d[3])
+		.min(12)
+		.pad(1)
+		.height(600)
+		.width(200)
+		.barSize(35)
+		.fill(d=>color[d.primary])
+];
+		
+[0,1].forEach(function(i){
+	g[i].call(bp[i])
+	
+	g[i].append("text").attr("x",-50).attr("y",-8).style("text-anchor","middle").text("Refactoring Operation");
+	g[i].append("text").attr("x", 280).attr("y",-8).style("text-anchor","middle").text("Instance");
+	
+	g[i].append("line").attr("x1",-100).attr("x2",0);
+	g[i].append("line").attr("x1",250).attr("x2",300);
+	
+	g[i].append("line").attr("y1",610).attr("y2",610).attr("x1",-100).attr("x2",0);
+	g[i].append("line").attr("y1",610).attr("y2",610).attr("x1",250).attr("x2",300);
+	
+	g[i].selectAll(".mainBars")
+		.on("mouseover",mouseover)
+		.on("mouseout",mouseout);
+
+	g[i].selectAll(".mainBars").append("text").attr("class","label")
+		.attr("x",d=>(d.part=="primary"? -30: 30))
+		.attr("y",d=>+6)
+		.text(d=>d.key)
+		.attr("text-anchor",d=>(d.part=="primary"? "end": "start"));
+
+});
+
+function mouseover(d){
+	[0,1].forEach(function(i){
+		bp[i].mouseover(d);
+		
+		g[i].selectAll(".mainBars").select(".perc")
+		.text(function(d){ return d3.format("0.0%")(d.percent)});
+	});
+}
+function mouseout(d){
+	[0,1].forEach(function(i){
+		bp[i].mouseout(d);
+		
+		g[i].selectAll(".mainBars").select(".perc")
+		.text(function(d){ return d3.format("0.0%")(d.percent)});
+	});
+}
+d3.select(self.frameElement).style("height", "800px");
+</script>
+<hr>
+
+
+<footer class="container-fluid text-center">
+</footer>
+
+</body>
+</html>

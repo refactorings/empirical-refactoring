@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refactoring Empirical Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    div.a {
+  text-indent: 200px;
+}
+         .button {
+    background-color: #555555;; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+ 
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+	
+			text{
+	font-size:12px;
+}
+.mainBars rect{
+  shape-rendering: auto;
+  fill-opacity: 0;
+  stroke-width: 0.5px;
+  stroke: rgb(0, 0, 0);
+  stroke-opacity: 0;
+}
+.subBars{
+	shape-rendering:crispEdges;
+}
+.edges{
+	stroke:none;
+	fill-opacity:0.5;
+}
+.header{
+	text-anchor:middle;
+	font-size:12px;
+}
+line{
+	stroke:grey;
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+         <li><a href="CaseStudy1.html">Case Study 1</a></li>
+        <li><a href="CaseStudy2.html">Case Study 2</a></li>
+        <li><a href="CaseStudy3.html">Case Study 3</a></li>
+        <li><a href="CaseStudy4.html">Case Study 4</a></li>
+        <li><a href="CaseStudy5.html">Case Study 5</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Refactoring Motivation: Bug Fixing</h1>      
+  </div>
+</div>
+
+<div class="a"><h2>Commit Message</h2></div>
+
+<div class="container text-center">    
+  <br>
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><a href="https://github.com/jawi/ols/commit/3e9e4db8649523f05fa358bf5243246ae6ec7c8a">Click here to view on GitHub</a>
+</div>
+        <div class="panel-body"><img src="./Images/GitEx_BugFix.PNG" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+</div>
+
+<div class="a"><h2>Refactorings (37 instances)</h2></div>
+
+<!-- div class="container text-center">--> 
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="js/viz.v1.js"></script>
+<script>
+
+var data=[['ExtractClass','nl.lxtreme.ols.client.Host.MainFrame from class nl.lxtreme.ols.client.Host',1],
+['ExtractMethod','private closeDialog(aResult boolean) : void extracted from private createDialogButtonPanel() : JPanel in class nl.lxtreme.ols.device.test.TestDeviceDialog',1],
+['ExtractMethod','private setCapturedData(aCapturedData CapturedData, aEnableActions boolean) : void extracted from public analysisComplete(aNewCapturedData CapturedData) : void in class nl.lxtreme.ols.client.Host.MainFrame',1],
+['ExtractMethod','private setCapturedData(aCapturedData CapturedData, aEnableActions boolean) : void extracted from public captureComplete(aCapturedData CapturedData) : void in class nl.lxtreme.ols.client.Host.MainFrame',1],
+['ExtractMethod','private setStatus(aText String) : void extracted from public analysisAborted(aReason String) : void in class nl.lxtreme.ols.client.Host.MainFrame',1],
+['ExtractMethod','private setStatus(aText String) : void extracted from public captureAborted(aReason String) : void in class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveAttribute','private actionManager : IActionManager from class nl.lxtreme.ols.client.Host to class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveAttribute','private currentDevCtrl : DeviceController from class nl.lxtreme.ols.client.Host to class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveAttribute','private deviceMenu : JMenu from class nl.lxtreme.ols.client.Host to class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveAttribute','private diagramScrollPane : DiagramScrollPane from class nl.lxtreme.ols.client.Host to class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveAttribute','private status : JTextStatusBar from class nl.lxtreme.ols.client.Host to class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveAttribute','private toolsMenu : JMenu from class nl.lxtreme.ols.client.Host to class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveMethod','private createMenuBars(aProject Project, aMainFrame JFrame, aDiagram DiagramScrollPane) : JToolBar from class nl.lxtreme.ols.client.Host to private createMenuBars() : JToolBar from class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveMethod','public analysisAborted(aReason String) : void from class nl.lxtreme.ols.client.Host to public analysisAborted(aReason String) : void from class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveMethod','public analysisComplete(aNewCapturedData CapturedData) : void from class nl.lxtreme.ols.client.Host to public analysisComplete(aNewCapturedData CapturedData) : void from class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveMethod','public captureAborted(aReason String) : void from class nl.lxtreme.ols.client.Host to public captureAborted(aReason String) : void from class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveMethod','public captureComplete(aCapturedData CapturedData) : void from class nl.lxtreme.ols.client.Host to public captureComplete(aCapturedData CapturedData) : void from class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveMethod','public getAction(aID String) : Action from class nl.lxtreme.ols.client.Host to public getAction(aID String) : Action from class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveMethod','public getCurrentDeviceController() : DeviceController from class nl.lxtreme.ols.client.Host to public getCurrentDeviceController() : DeviceController from class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveMethod','public setCurrentDeviceController(aCurrentDevCtrl DeviceController) : void from class nl.lxtreme.ols.client.Host to public setCurrentDeviceController(aCurrentDevCtrl DeviceController) : void from class nl.lxtreme.ols.client.Host.MainFrame',1],
+['MoveMethod','public updateProgress(aPercentage int) : void from class nl.lxtreme.ols.client.Host to public updateProgress(aPercentage int) : void from class nl.lxtreme.ols.client.Host.MainFrame',1],
+['RenameAttribute','dialog : TestDeviceDialog to configDialog : TestDeviceDialog in class nl.lxtreme.ols.device.test.TestDeviceController',1],
+['RenameAttribute','host : Host to frame : MainFrame in class nl.lxtreme.ols.client.action.RunAnalysisToolAction',1],
+['RenameAttribute','host : Host to frame : MainFrame in class nl.lxtreme.ols.client.action.SelectDeviceAction',1],
+['RenameAttribute','host : Host to frame : MainFrame in class nl.lxtreme.ols.client.osgi.ToolTracker',1],
+['RenameAttribute','host : Host to mainFrame : MainFrame in class nl.lxtreme.ols.client.action.CaptureAction',1],
+['RenameAttribute','host : Host to mainFrame : MainFrame in class nl.lxtreme.ols.client.osgi.DeviceControllerTracker',1],
+['RenameMethod','protected getToOsgiLogLevel(aLevel Level) : int renamed to protected toOSGiLogLevel(aLevel Level) : int in class nl.lxtreme.ols.logging.JdkLogForwarder.OsgiLogDelegateHandler',1],
+['RenameParameter','aHost : Host to aFrame : MainFrame in method protected CaptureAction(aID String, aIconName String, aName String, aDescription String, aFrame MainFrame) in class nl.lxtreme.ols.client.action.CaptureAction',1],
+['RenameParameter','aHost : Host to aFrame : MainFrame in method public CaptureAction(aFrame MainFrame) in class nl.lxtreme.ols.client.action.CaptureAction',1],
+['RenameParameter','aHost : Host to aFrame : MainFrame in method public DeviceControllerTracker(aContext BundleContext, aFrame MainFrame, aMenu JMenu) in class nl.lxtreme.ols.client.osgi.DeviceControllerTracker',1],
+['RenameParameter','aHost : Host to aFrame : MainFrame in method public RepeatCaptureAction(aFrame MainFrame) in class nl.lxtreme.ols.client.action.RepeatCaptureAction',1],
+['RenameParameter','aHost : Host to aFrame : MainFrame in method public RunAnalysisToolAction(aFrame MainFrame, aTool Tool) in class nl.lxtreme.ols.client.action.RunAnalysisToolAction',1],
+['RenameParameter','aHost : Host to aFrame : MainFrame in method public SelectDeviceAction(aFrame MainFrame, aDeviceController DeviceController) in class nl.lxtreme.ols.client.action.SelectDeviceAction',1],
+['RenameParameter','aHost : Host to aFrame : MainFrame in method public ToolTracker(aContext BundleContext, aFrame MainFrame, aMenu JMenu) in class nl.lxtreme.ols.client.osgi.ToolTracker',1],
+['RenameVariable','rawMsg : String to result : String in method private getMessage(aRecord LogRecord) : String in class nl.lxtreme.ols.logging.JdkLogForwarder.OsgiLogDelegateHandler',1],
+['RenameVariable','task : Runnable to startTask : Runnable in method public start(aContext BundleContext) : void in class nl.lxtreme.ols.client.Activator',1]
+];
+var color ={ExtractClass:"#3366CC",ExtractMethod:"#DC3912",MoveAttribute:"#FF9900",MoveMethod:"#109618",RenameAttribute:"#990099",RenameVariable:"#0099C6",RenameMethod:"#3366CC"};
+var svg = d3.select("body").append("svg").attr("width", 1700).attr("height",800);
+
+
+<!--svg.append("text").attr("x",250).attr("y",70).attr("class","header").text("Refactoring");-->
+	
+
+var g =[svg.append("g").attr("transform","translate(150,100)")
+	   ];
+
+var bp=[ viz.bP()
+		.data(data)
+		.min(12)
+		.pad(1)
+		.height(600)
+		.width(250)
+		.barSize(35)
+		.fill(d=>color[d.primary])		
+	,viz.bP()
+		.data(data)
+		.value(d=>d[3])
+		.min(12)
+		.pad(1)
+		.height(600)
+		.width(200)
+		.barSize(35)
+		.fill(d=>color[d.primary])
+];
+		
+[0,1].forEach(function(i){
+	g[i].call(bp[i])
+	
+	g[i].append("text").attr("x",-50).attr("y",-8).style("text-anchor","middle").text("Refactoring Operation");
+	g[i].append("text").attr("x", 280).attr("y",-8).style("text-anchor","middle").text("Instance");
+	
+	g[i].append("line").attr("x1",-100).attr("x2",0);
+	g[i].append("line").attr("x1",250).attr("x2",300);
+	
+	g[i].append("line").attr("y1",610).attr("y2",610).attr("x1",-100).attr("x2",0);
+	g[i].append("line").attr("y1",610).attr("y2",610).attr("x1",250).attr("x2",300);
+	
+	g[i].selectAll(".mainBars")
+		.on("mouseover",mouseover)
+		.on("mouseout",mouseout);
+
+	g[i].selectAll(".mainBars").append("text").attr("class","label")
+		.attr("x",d=>(d.part=="primary"? -30: 30))
+		.attr("y",d=>+6)
+		.text(d=>d.key)
+		.attr("text-anchor",d=>(d.part=="primary"? "end": "start"));
+
+});
+
+function mouseover(d){
+	[0,1].forEach(function(i){
+		bp[i].mouseover(d);
+		
+		g[i].selectAll(".mainBars").select(".perc")
+		.text(function(d){ return d3.format("0.0%")(d.percent)});
+	});
+}
+function mouseout(d){
+	[0,1].forEach(function(i){
+		bp[i].mouseout(d);
+		
+		g[i].selectAll(".mainBars").select(".perc")
+		.text(function(d){ return d3.format("0.0%")(d.percent)});
+	});
+}
+d3.select(self.frameElement).style("height", "800px");
+</script>
+<hr>
+
+
+
+<footer class="container-fluid text-center">
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refactoring Empirical Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+    }
+  </style>
+  
+</head>
+<body id="pageBody">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="RQ1.html">Refactoring Motivation</a></li>
+        <li><a href="RQ2.html">Refactoring Documentation</a></li>
+        <!--<li><a href="RQ3.html">RQ3</a></li>
+        <li><a href="RQ4.html">RQ4</a></li>
+        <li><a href="RQ5.html">RQ5</a></li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Production and Test File Refactoring</h1>      
+  </div>
+</div>
+
+    <div class="w3-center w3-padding-32">
+        <div class="w3-card w3-container w3-justify w3-padded-box">
+            <p>
+               In the below table, we show the volume of operations for each refactoring operation applied to the refactored test and
+production files grouped by the classification category associated with the file. Values in bold indicate the most common
+applied refactoring operation – Move Class and Rename Parameter for production files, and Rename Method for test files. 
+            </p>
+            <p>
+                Concerning production file-related refactoring motivations, the top most refactoring operations performed across all
+refactoring motivations is Move Class refactoring, except for BugFix in which Rename Attribute is the highest performed
+refactoring. In the case of internal quality attribute-related motivations, developers performed Move Class refactoring
+to move the relevant classes to the right package if there are many dependencies for the class between two packages.
+This could eliminate undesired dependencies between modules. Another possibility for the reason to perform such
+refactoring is to introduce a sub-package and move a group of related classes to a new subpackage. With respect to code
+smell resolution motivation, developers eliminate a redundant sub-package and nesting level in the package structure
+when performing Move Class refactoring operations. With regards to external quality attribute-related motivation,
+developers can target improving the understandability of the code by repackaging and moving the classes between
+these packages. Hence, the structure of the code becomes more understandable. Developers could also maintain code
+compatibility by moving a class back to its original package to maintain backward compatibility. For feature addition
+or modification, Move Class refactoring is performed when adding new or modifying the implemented features. This
+could be done by moving the class to appropriate containers or moving a class to a package that is more functionally or
+conceptually relevant. Lastly, for bug fixing-related motivations, developers mainly improve parameter and method
+names; they rename a parameter or method to better represent its purpose and to enforce naming consistency and to
+conform to the project’s naming conventions. Developers need to change the semantics of the code to improve the
+readability of the code. For test files-related refactoring motivations, the most frequently applied refactoring is Rename
+Method. This can be explained by the fact that test methods are the fundamental elements in a test suite. Test methods
+are utilized to test the production source code; hence, the high occurrence of method based refactorings in unit test files.
+The observed difference in the distribution of refactorings in production/test files between our study and the related
+work is also due to the size (number of projects) effect of the two groups under comparison.
+            </p>
+           
+                <img src="Images/ProdTest.PNG" style="width:80%" class="center"/>                
+        </div>
+
+        <div class="w3-card w3-padded-box w3-margin-top">
+            <div class="w3-container w3-half w3-margin-top w3-margin-bottom">
+                &nbsp;
+            </div>
+        </div>
+<footer class="container-fluid text-center">
+</footer>
+
+</body>
+</html>

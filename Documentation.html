@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Refactoring Empirical Study</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../../assets/w3.css">
+    <link rel="stylesheet" href="../../assets/w3-theme-teal.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/java.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117089382-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117089382-1');
+    </script>
+
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+  <style>
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+    }
+  </style>
+</head>
+
+<body id="pageBody">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="RQ1.html">Refactoring Motivation</a></li>
+        <li><a href="RQ2.html">Refactoring Documentation</a></li>
+        <!--<li><a href="RQ3.html">RQ3</a></li>
+        <li><a href="RQ4.html">RQ4</a></li>
+        <li><a href="RQ5.html">RQ5</a></li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Refactoring Documentation</h1>      
+  </div>
+</div>
+
+
+    <div class="w3-center w3-padding-32">
+        <div class="w3-card w3-container w3-justify w3-padded-box">
+            <p>
+              Upon a closer inspection of these refactoring patterns, we have made several observations: we noticed that developers
+document refactoring activities at different levels of granularity, e.g., package, class, and method level. Furthermore, we
+observe that developers state the motivation behind refactoring, and some of these patterns are not restricted only to
+fixing code smells, as in the original definition of refactoring in Fowler’s book, i.e., improving the structure of the code.
+For instance, developers tend often to improve certain non-functional attributes such as the readability and testability
+of the source code. Additionally, developers occasionally apply the “Don’t Repeat Yourself” principle by removing
+excessive code duplication. A few patterns indicated that developers refactor the code to improve internal quality
+attributes such as inheritance, polymorphism, and abstraction. We also noticed the application of a single responsibility
+principle which is meant to improve the cohesion and coupling of the class when developers explicitly mentioned a few
+patterns related to dependency removal.
+            </p>
+			<p>Further, we observe that developers tend to report the executed refactoring operations by explicitly using terms
+from Fowler’s taxonomy; terms such as inline class/method, Extract Class/Superclass/Method or Push Up Field/Method
+and Push Down Field/Method.
+			</p>
+            <p>
+               The generic nature of some of these patterns was a critical observation that we encountered, i.e., many of these
+patterns are context specific and can be subject to many interpretations, depending on the meaning the developer is
+trying to convey. For instance, the pattern fixed a problem is descriptive of any anomaly developer encountered and it
+can be either functional or non-functional. Since in our study, we are interested in textual patterns related to refactoring,
+we decided to filter this list down by reporting patterns whose frequency in commit messages containing refactoring
+is significantly higher than in messages of commits without refactoring. The rationale behind this idea is to identify
+patterns that are repeatedly used in the context of refactoring, and less often in other contexts. Since the patterns were
+extracted from 111,884 messages of commits containing refactoring (we call them refactoring commits), we need to build
+another corpus of messages from commits that do not contain refactorings (we call them non-refactoring commits). As
+we plan on comparing the frequency of keywords between the two corpora, i.e., refactoring and non-refactoring commit
+messages, it is important to adequately choose the non-refactoring messages to ensure fairness. To do so, we follow
+the following heuristics: we randomly select a statistically significant sample of commits (confidence level of 95%), 1)
+chosen from the same set of 800 projects that issued the refactoring commits; 2) whose authors are from the same
+authors of the refactoring commits; 3) whose timestamps are in the same interval of refactoring commits timestamps; 4)
+and finally, the average length of commit messages are approximately close (118 for refactoring commits, and 120 for
+non-refactoring commits).
+            </p>
+           
+                <img src="Images/WordCloud.PNG" style="width:60%" class="center"/>                
+        </div>
+
+        <div class="w3-card w3-padded-box w3-margin-top">
+            <div class="w3-container w3-half w3-margin-top w3-margin-bottom">
+                &nbsp;
+            </div>
+        </div>
+<footer class="container-fluid text-center">
+</footer>
+<footer class="container-fluid text-center">
+</footer>
+
+</body>
+</html>
